@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--Very-Dark-Magenta);
+    line-height: 1.3;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 30px;
+    margin: auto;
+}
+
+section.feedback{
+    padding: 60px 0;
+}
+
+.ratings {
+    text-align: center;
+}
+
+.ratings h2{
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+
+.col.rating{
+    display: grid;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.rating-body{
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.rating-body h4{
+    line-height: 1;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.rating-body .stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.testimonials {
+    display: grid;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.testimonials .testimonial-body {
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 6px;
+    padding: 30px;
+    color: var(--White);
+    text-align: left;
+}
+
+.testimonials .testimonial-body .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial-body .user .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 25px;
+}
+
+.testimonials .testimonial-body .user .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials .testimonial-body .user .info h5{
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.testimonials .testimonial-body .user .info p{
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--Soft-Pink);
+}
+
+.testiomony{
+    line-height: 1.4;
+}
+
+/*---------Screen sizes----------*/
+
+@media (min-width: 1024px){
+    .container {
+        padding: 0 8%;
+    }
+    section.feedback{
+        padding: 120px 0;
+    }
+    .row.ratings {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 25px;
+    }
+    .row.ratings .col.text {
+        text-align: left;
+    }
+    .ratings h2 {
+        font-size: 45px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    .ratings p {
+        max-width: 65%;
+    }
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 60px;
+        align-items: flex-start;
+    }
+    .testimonials .testimonial-body.m-margin {
+        margin-top: 15px;
+    }
+    .testimonials .testimonial-body.l-margin {
+        margin-top: 30px;
+    }
+    .rating-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        width: 100%;
+        max-width: 85%;
+    }
+    .col.rating {
+        margin-top: 20px;
+    }
+    .rating-body.m-margin{
+        justify-self: center;
+    }
+    .rating-body.s-margin{
+        justify-self: flex-end;
+    }
+    .rating-body h4 {
+        font-size: 16px;
+        padding: 0 0 0 40px;
+    }
+    .rating-body .stars {
+        display: inline-flex;
+        justify-content: inherit;
+    }
+}
